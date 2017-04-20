@@ -1,0 +1,195 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >video-thumb (v0.0.3)</a>
+</h1>
+<h4>Extract snapshots from video at a given time. Requires ffmpeg.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.video-thumb">module video-thumb</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.video-thumb.extract">
+            function <span class="apidocSignatureSpan">video-thumb.</span>extract
+            <span class="apidocSignatureSpan">(path, destPath, time, size, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">video-thumb.</span>video_thumb</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.video-thumb.video_thumb">module video-thumb.video_thumb</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.video-thumb.video_thumb.extract">
+            function <span class="apidocSignatureSpan">video-thumb.video_thumb.</span>extract
+            <span class="apidocSignatureSpan">(path, destPath, time, size, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.video-thumb" id="apidoc.module.video-thumb">module video-thumb</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.video-thumb.extract" id="apidoc.element.video-thumb.extract">
+        function <span class="apidocSignatureSpan">video-thumb.</span>extract
+        <span class="apidocSignatureSpan">(path, destPath, time, size, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function (path, destPath, time, size, callback) {
+  if (time == null) {
+    time = &#x27;00:00:01&#x27;;
+  }
+  if (size == null) {
+    size = &#x27;200x125&#x27;;
+  }
+  return exec(&#x27;ffmpeg -ss &#x27; + time + &#x27; -i &#x27; + path + &#x27; -y -s &#x27; + size + &#x27; -vframes 1 -f image2 &#x27; + destPath, function( err ) {
+    if (callback) {
+      return callback( err );
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```npm install video-thumb```
+
+# Usage
+
+```
+var thumbler = require(&#x27;video-thumb&#x27;);
+
+thumbler.<span class="apidocCodeKeywordSpan">extract</span>(&#x27;video.mp4&#x27;, &#x27;snapshot.png&#x27;, &#x27;00:00:22&#x27
+;, &#x27;200x125&#x27;, function(){
+	
+	console.log(&#x27;snapshot saved to snapshot.png (200x125) with a frame at 00:00:22&#x27;);
+
+});
+```
+
+## License
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.video-thumb.video_thumb" id="apidoc.module.video-thumb.video_thumb">module video-thumb.video_thumb</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.video-thumb.video_thumb.extract" id="apidoc.element.video-thumb.video_thumb.extract">
+        function <span class="apidocSignatureSpan">video-thumb.video_thumb.</span>extract
+        <span class="apidocSignatureSpan">(path, destPath, time, size, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function (path, destPath, time, size, callback) {
+  if (time == null) {
+    time = &#x27;00:00:01&#x27;;
+  }
+  if (size == null) {
+    size = &#x27;200x125&#x27;;
+  }
+  return exec(&#x27;ffmpeg -ss &#x27; + time + &#x27; -i &#x27; + path + &#x27; -y -s &#x27; + size + &#x27; -vframes 1 -f image2 &#x27; + destPath, function( err ) {
+    if (callback) {
+      return callback( err );
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```npm install video-thumb```
+
+# Usage
+
+```
+var thumbler = require(&#x27;video-thumb&#x27;);
+
+thumbler.<span class="apidocCodeKeywordSpan">extract</span>(&#x27;video.mp4&#x27;, &#x27;snapshot.png&#x27;, &#x27;00:00:22&#x27
+;, &#x27;200x125&#x27;, function(){
+	
+	console.log(&#x27;snapshot saved to snapshot.png (200x125) with a frame at 00:00:22&#x27;);
+
+});
+```
+
+## License
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
