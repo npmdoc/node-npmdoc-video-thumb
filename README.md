@@ -1,6 +1,6 @@
 # npmdoc-video-thumb
 
-#### api documentation for  video-thumb (v0.0.3)  [![npm package](https://img.shields.io/npm/v/npmdoc-video-thumb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-video-thumb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-video-thumb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-video-thumb)
+#### basic api documentation for  video-thumb (v0.0.3)  [![npm package](https://img.shields.io/npm/v/npmdoc-video-thumb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-video-thumb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-video-thumb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-video-thumb)
 
 #### Extract snapshots from video at a given time. Requires ffmpeg.
 
@@ -21,9 +21,22 @@
 ```json
 
 {
-    "name": "video-thumb",
-    "version": "0.0.3",
+    "author": {
+        "name": "Vadim Demedes"
+    },
+    "dependencies": {},
+    "deprecated": "Package is no longer maintained",
     "description": "Extract snapshots from video at a given time. Requires ffmpeg.",
+    "devDependencies": {},
+    "directories": {},
+    "dist": {
+        "shasum": "18c6d2f304483b5b555b3759cd4388f6e8a08d08",
+        "tarball": "https://registry.npmjs.org/video-thumb/-/video-thumb-0.0.3.tgz"
+    },
+    "engines": {
+        "node": ">= 0.4"
+    },
+    "gitHead": "10e1357927d36877f4bc4a4910a76e5f961c05ec",
     "keywords": [
         "ffmpeg",
         "video",
@@ -31,12 +44,17 @@
         "thumbnail",
         "video thumbnail"
     ],
-    "author": "Vadim Demedes <sbioko@gmail.com>",
-    "dependencies": {},
     "main": "index",
-    "engines": {
-        "node": ">= 0.4"
-    }
+    "maintainers": [
+        {
+            "name": "vdemedes"
+        }
+    ],
+    "name": "video-thumb",
+    "optionalDependencies": {},
+    "scripts": {},
+    "version": "0.0.3",
+    "bin": {}
 }
 ```
 
